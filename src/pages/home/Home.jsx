@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../../components/Navbar";
+import Navbar from "../../components/navbar/Navbar";
+import MobileDrawer from "../../components/navbar/MobileDrawer";
 
 const Home = () => {
   return (
@@ -7,6 +8,12 @@ const Home = () => {
       <div className="absolute top-0 w-full hidden md:block lg:block">
         <Navbar />
       </div>
+
+      <div className="absolute top-5 left-5 w-full  md:hidden lg:hidden">
+        <MobileDrawer />
+      </div>
+
+
       <Outlet />
     </div>
   );
